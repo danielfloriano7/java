@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 public class OperadoresAritmeticos {
 
     /**
@@ -5,8 +8,14 @@ public class OperadoresAritmeticos {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        int n1 = 3;
-        int n2 = 5;
+        
+        Scanner teclado = new Scanner(System.in);
+        
+        System.out.print("Digite 1º numero: ");
+        
+        
+        float n1 = teclado.nextFloat();
+        float n2 = 5;
         
         float m = (n1 + n2)/2;
         
