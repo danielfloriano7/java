@@ -24,22 +24,15 @@ public class Principal {
                 + "Lista de jogos que não zerei[4]"));
         
         switch (procurar) {
-            case 1:
-               
-                
-                break;
-            case 2:
-                System.out.println("2");
-                break;
-            case 3:
-                System.out.println("3");
-                break;
-            case 4:    
-                System.out.println("4");
-                break;
-            default:
+            case 1 -> {
+            }
+            case 2 -> System.out.println("2");
+            case 3 -> System.out.println("3");
+            case 4 -> System.out.println("4");
+            default -> {
                 JOptionPane.showMessageDialog(null, "ERROR, numero incorreto!!!!!");
-             procura();
+                procura();
+            }
                 
                 
 
