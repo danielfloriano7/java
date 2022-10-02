@@ -19,6 +19,8 @@ public class Principal {
         
         UEC01.marcarLuta(l[0], l[1]);
         UEC01.lutar();
+        
+        
     }
 
 }
