@@ -1,5 +1,7 @@
 package aula07;
 
+import java.util.Random;
+
 public class Luta {
 
     //Atributos
@@ -10,11 +12,11 @@ public class Luta {
 
     //Métodos
     public void marcarLuta(Lutador l1, Lutador l2) {
-        if(l1.getCategoria() == l2.getCategoria() && l1 != l2){
+        if(l1.getCategoria().equals(l2.getCategoria()) && l1 != l2){
             this.aprovada = true;
             this.desafiado = l1;
             this.desafiante = l2;
-                System.out.println("Marcado");
+            System.out.println("Marcado");
         } else {
             this.aprovada = false;
             this.desafiado = null;
@@ -24,30 +26,36 @@ public class Luta {
     }
 
     public void lutar() {
-        if(aprovada){
-            Double vencedor = Math.random() * 3;
+        if(this.aprovada){
+            //Double vencedor = Math.random() * 3;
             
-            desafiado.apresentar();
-            desafiante.apresentar();
+            System.out.println("### DESAFIADO ###");
+            this.desafiado.apresentar();
+            System.out.println("### DESAFIANTE ###");
+            this.desafiante.apresentar();
             
-            switch (vencedor.intValue()) {
+            Random ale = new Random();
+            int vencedor = ale.nextInt(3);
+            
+            System.out.println("======= RESULTADO DA LUTA =======");
+            switch (vencedor) {
                 case 0:
                     System.out.println("Empate!");
-                    desafiado.empatarLuta();
-                    desafiante.empatarLuta();
+                    this.desafiado.empatarLuta();
+                    this.desafiante.empatarLuta();
                     break;
                 case 1:
-                    System.out.println(desafiado.getNome());
-                    desafiado.ganharLuta();
-                    desafiante.perderLuta();
+                    System.out.println("Vitoria do " + desafiado.getNome());
+                    this.desafiado.ganharLuta();
+                    this.desafiante.perderLuta();
                     break;
                 case 2:
-                    System.out.println(desafiante.getNome());
-                    desafiante.ganharLuta();
-                    desafiado.perderLuta();
+                    System.out.println("Vitoria do " + desafiante.getNome());
+                    this.desafiante.ganharLuta();
+                    this.desafiado.perderLuta();
                     break;
             }
-            
+                System.out.println("=================================");
         } else{
             System.out.println("Luta não pode acontecer");
         }
