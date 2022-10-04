@@ -36,7 +36,7 @@ public class Principal {
         prof1.setSalario(3000);
         prof1.receberAumento(330.50f);
         
-        Tecnicco t1 = new Tecnicco();
+        Tecnico t1 = new Tecnico();
         t1.setNome("Daniel");
         t1.setIdade(20);
         t1.setMatricula(2427);

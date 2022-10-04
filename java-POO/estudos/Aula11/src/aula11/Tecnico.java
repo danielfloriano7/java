@@ -1,6 +1,6 @@
 package aula11;
 
-public class Tecnicco extends Aluno{
+public class Tecnico extends Aluno{
     private String registroProfissional;
     
     public void praticar() {
