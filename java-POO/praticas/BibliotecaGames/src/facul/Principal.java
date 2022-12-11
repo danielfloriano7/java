@@ -1,22 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package facul;
 
 import java.util.HashMap;
 import java.util.Map;
 import javax.swing.JOptionPane;
 
-
- 
 public class Principal {
  
    
     public static void procura() {
         int procurar = 1;
         
-     
                 procurar = Integer.parseInt(JOptionPane.showInputDialog(null, "Oque voce quer fazer?\n"
                 + "Mostrar a lista completa[1]\n"
                 + "Procurar pelo generos[2]\n"
@@ -25,6 +18,7 @@ public class Principal {
         
         switch (procurar) {
             case 1 -> {
+                
             }
             case 2 -> System.out.println("2");
             case 3 -> System.out.println("3");

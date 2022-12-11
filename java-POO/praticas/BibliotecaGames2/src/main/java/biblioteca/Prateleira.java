@@ -8,8 +8,7 @@ import javax.swing.JOptionPane;
 public class Prateleira {
 
     private Games games; // = new Games(null, null, 0);
-
-    List<Games> biblioteca = new ArrayList<>();
+    private List<Games> biblioteca = new ArrayList<>();
 
     //Metodos
     public void jogos() {
